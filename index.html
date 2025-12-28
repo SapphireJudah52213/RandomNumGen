@@ -166,7 +166,7 @@
         elPC.appendChild(ScriptPC);
         document.body.appendChild(elPC);
         const PCHead = document.createElement('head')
-        PCHead.innerHTML = `<meta name="viewport" content="width=device-width, initial-scale=2, user-scalable=no">`
+        PCHead.innerHTML = `<meta name="viewport" content="width=device-width, initial-scale=3, user-scalable=no">`
         document.body.appendChild(PCHead)
       }
 
@@ -174,13 +174,13 @@
         const elMobile = document.createElement('div')
         elMobile.innerHTML = `
           <textarea style="height:15px;width:170px;resize:none; font-size:15px;" placeholder="bottom number?" id="floor" textwrap="none"></textarea>
-          <textarea style="height:15px;width:170px;resize:none;position:absolute;margin-left:-170px;margin-top:150px;font-size:15px;" placeholder="top number?" id="ceiling" textwrap="none"></textarea>
+          <textarea style="height:15px;width:170px;resize:none;position:absolute;margin-left:-180px;margin-top:20px;font-size:15px;" placeholder="top number?" id="ceiling" textwrap="none"></textarea>
           <!--<button class="submitFloor" id="submitFloor" onclick="submit('floor')"><strong>Submit</strong></button>
           <button class="submitCeiling" id="submitCeiling" onclick="submit('ceiling')"><strong>Submit</strong></button>-->
           <div style="color: red; margin-top 240px; position:absolute;" id="div1">RESULT</div>
           <div style="color: #00cffa; display:none; margin-left: 100px; margin-top:300px; position:absolute; font-size:200px;" id="div1">RESULT</div>
-          <button class="go" style="position:absolute;" id="go" onclick="roll()"><strong>GO!</strong></button>
-          <label class="switch" style="position:absolute;">
+          <button class="go" style="position:absolute;margin-left:10px;" id="go" onclick="roll()"><strong>GO!</strong></button>
+          <label class="switch" style="position:absolute;margin-left:10px;">
             <input type="checkbox" id="decimal">
              <span class="slider"></span>
           </label>
