@@ -26,7 +26,7 @@
   </head>
   <body>
     <textarea style="height:16px;width:105px;resize:none;" placeholder="bottom number?" id="floor"></textarea>
-    <textarea style="height:16px;width:105px;resize:none;position:absolute;margin-left:140px;" placeholder="top number?" id="ceiling"></textarea>
+    <textarea style="height:16px;width:105px;resize:none;position:absolute;margin-left:75px;" placeholder="top number?" id="ceiling"></textarea>
     <button class="submitFloor" id="submitFloor" onclick="submit('floor')"><strong>Submit</strong></button>
     <button class="submitCeiling" id="submitCeiling" onclick="submit('ceiling')"><strong>Submit</strong></button>
     <div style="color: red;" id="div1">HI!</div>
@@ -35,8 +35,10 @@
       let bottomArea = document.getElementById('floor')
       let topArea = document.getElementById('ceiling')
       let submit = function(type) {
-        bottom = bottomArea.value
-        top = topArea.value
+        console.log(parseInt(bottomArea.value))
+        console.log(parseInt(topArea.value))
+        bottom = parseInt(bottomArea.value)
+        top = parseInt(topArea.value)
         if(type === 'floor') {
           let floor = parseInt(bottom);
         }
@@ -45,8 +47,9 @@
         }
       }
       let roll = function() {
-        let answer = Math.floor(Math.random() * (ceiling - floor + 1)) + floor;
+        let answer = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
         document.getElementById('div1').textContent = answer;
+        return answer;
       }
     </script>
   </body>
