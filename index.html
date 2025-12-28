@@ -100,7 +100,7 @@
           document.getElementById('div1').textContent = "Enter a bottom number please";
           return
         }
-        if (document.getElementById('decimal').value === false) {
+        if (document.getElementById('decimal').checked === false) {
           animation('no');
           setTimeout(()=> {
             let answer = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
@@ -108,7 +108,7 @@
             return answer;
           },1000);
         }
-        if (document.getElementById('decimal').value === true) {
+        if (document.getElementById('decimal').checked === true) {
           animation('decimal');
           setTimeout(()=> {
             let answer = Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1) + parseInt(bottomArea.value);
