@@ -33,10 +33,10 @@
     <button class="go" id="go" onclick="roll()"><strong>GO!</strong></button>
     <script>
       let bottomArea = document.getElementById('floor')
-      let bottom = bottomArea.value
       let topArea = document.getElementById('ceiling')
-      let top = topArea.value
       let submit = function(type) {
+        bottom = bottomArea.value
+        top = topArea.value
         if(type === 'floor') {
           let floor = parseInt(bottom);
         }
