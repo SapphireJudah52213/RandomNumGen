@@ -13,20 +13,28 @@
         position:absolute;
         height:21px;
         width:65px;
-        margin-left:10px;
+        margin-left:205px;
         background:conic-gradient(red 0deg, purple 60deg, blue 120deg, green 180deg, yellow 240deg, orange 300deg, red 360deg);
+      }
+      .go {
+        height:30px;
+        width:30px;
+        position:absolute;
+        margin-top:50px;
       }
     </style>
   </head>
   <body>
     <textarea style="height:16px;width:105px;resize:none;" placeholder="bottom number?" id="floor"></textarea>
+    <textarea style="height:16px;width:105px;resize:none;position:absolute;margin-left:140px;" placeholder="top number?" id="ceiling"></textarea>
     <button class="submitFloor" id="submitFloor" onclick="submit('floor')"><strong>Submit</strong></button>
     <button class="submitCeiling" id="submitCeiling" onclick="submit('ceiling')"><strong>Submit</strong></button>
     <div style="color: red;" id="div1">HI!</div>
+    <button class="go" id="go" onclick="roll()"><strong>GO!</strong></button>
     <script>
-      let bottomArea = document.getElementById('submitFloor')
+      let bottomArea = document.getElementById('floor')
       let bottom = bottomArea.value
-      let topArea = document.getElementById('submitCeiling')
+      let topArea = document.getElementById('ceiling')
       let top = topArea.value
       let floor = 0;
       let ceiling = 2;
