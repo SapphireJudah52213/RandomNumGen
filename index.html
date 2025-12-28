@@ -6,18 +6,42 @@
         position:absolute;
         height:21px;
         width:65px;
+        margin-left:10px;
         background:conic-gradient(red 0deg, orange 60deg, yellow 120deg, green 180deg, blue 240deg, purple 300deg, red 360deg);
+      }
+      .submitCeiling {
+        position:absolute;
+        height:21px;
+        width:65px;
+        margin-left:10px;
+        background:conic-gradient(red 0deg, purple 60deg, blue 120deg, green 180deg, yellow 240deg, orange 300deg, red 360deg);
       }
     </style>
   </head>
   <body>
     <textarea style="height:16px;width:105px;resize:none;" placeholder="bottom number?" id="floor"></textarea>
-    <button class="submitFloor" id="submitFloor"><strong>Submit</strong></button>
-    <div style="color: red;" >HI!</div>
+    <button class="submitFloor" id="submitFloor" onclick="submit('floor')"><strong>Submit</strong></button>
+    <button class="submitCeiling" id="submitCeiling" onclick="submit('ceiling')"><strong>Submit</strong></button>
+    <div style="color: red;" id="div1">HI!</div>
     <script>
-      let bottomArea = document.getElementById('floor')
+      let bottomArea = document.getElementById('submitFloor')
       let bottom = bottomArea.value
-      
+      let topArea = document.getElementById('submitCeiling')
+      let top = topArea.value
+      let floor = 0;
+      let ceiling = 2;
+      let submit = function(type) {
+        if(type === 'floor') {
+          floor = bottom;
+        }
+        else if(type === 'ceiling') {
+          ceiling = top;
+        }
+      }
+      let roll = function() {
+        let answer = Math.floor(Math.random() * (floor - min + 1)) + min;
+        document.getElementById('div1').textContent = answer;
+      }
     </script>
   </body>
 </html>
