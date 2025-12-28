@@ -54,15 +54,17 @@
           document.getElementById('div1').textContent = "Enter a bottom number please";
         }
         animation();
-        sleep(1000)
-        let answer = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
-        document.getElementById('div1').textContent = answer;
-        return answer;
+        setTimeout(()=> {
+          let answer = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
+          document.getElementById('div1').textContent = answer;
+          return answer;
+        },1000);
       }
       let animation = function() {
         for(let i = 0; i < 10; i ++) {
-          document.getElementById('div1').textContent = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
-          sleep(100 * i);
+          setTimeout(()=> {
+            document.getElementById('div1').textContent = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
+          },100 * i);
         }
       }
     </script>
