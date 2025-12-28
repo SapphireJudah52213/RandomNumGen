@@ -36,18 +36,16 @@
       let bottom = bottomArea.value
       let topArea = document.getElementById('ceiling')
       let top = topArea.value
-      let floor = 0;
-      let ceiling = 2;
       let submit = function(type) {
         if(type === 'floor') {
-          floor = bottom;
+          let floor = parseInt(bottom);
         }
         else if(type === 'ceiling') {
-          ceiling = top;
+          let ceiling = parseInt(top);
         }
       }
       let roll = function() {
-        let answer = Math.floor(Math.random() * (floor - min + 1)) + min;
+        let answer = Math.floor(Math.random() * (ceiling - floor + 1)) + floor;
         document.getElementById('div1').textContent = answer;
       }
     </script>
