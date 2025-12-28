@@ -145,8 +145,7 @@
       }
       }
 
-       if (useMobile) renderMobile(); else renderPC();
-
+       
       let renderPC = function() {
         const elPC = document.createElement('div')
         elPC.innerHTML = `
@@ -182,6 +181,9 @@
         `;
         document.body.appendChild(elMobile);
       }
+
+      if (useMobile) renderMobile(); else renderPC();
+
     </script>
   </body>
 </html>
