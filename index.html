@@ -49,9 +49,11 @@
       let roll = function() {
         if(topArea.value === '') {
           document.getElementById('div1').textContent = "Enter a top number please";
+          return
         }
         if(bottomArea.value === '') {
           document.getElementById('div1').textContent = "Enter a bottom number please";
+          return
         }
         animation();
         setTimeout(()=> {
