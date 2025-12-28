@@ -109,7 +109,7 @@
         ScriptPC.innerHTML = `let bottomArea = document.getElementById('floor')
         const colors = ['red','orange','yellow','green','blue','purple']
         console.log(colors)
-        let color1 = colors.at(Math.random * 5)
+        let color1 = colors.at(Math.random() * 5)
         console.log(color1)
       let topArea = document.getElementById('ceiling')
       let submit = function(type) {
@@ -136,9 +136,9 @@
         if (document.getElementById('decimal').checked === false) {
           animation('no');
           setTimeout(()=> {
-            let answer = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
+            let answer = Math.floor(Math.random()() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
             document.getElementById('div1').textContent = answer;
-            color1 = colors.at(Math.random * 5)
+            color1 = colors.at(Math.random() * 5)
             console.log(color1)
             document.getElementById('div1').style.color = color1
             return answer;
@@ -147,9 +147,9 @@
         if (document.getElementById('decimal').checked === true) {
           animation('decimal');
           setTimeout(()=> {
-            let answer = Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1) + parseInt(bottomArea.value);
+            let answer = Math.random()() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1) + parseInt(bottomArea.value);
             document.getElementById('div1').textContent = answer;
-            color1 = colors.at(Math.random * 5)
+            color1 = colors.at(Math.random() * 5)
             console.log(color1)
             document.getElementById('div1').style.color = color1
             return answer;
@@ -160,8 +160,8 @@
         if (type === 'decimal') {
           for(let i = 0; i < 10; i ++) {
               setTimeout(()=> {
-              document.getElementById('div1').textContent = Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1) + parseInt(bottomArea.value);
-              color1 = colors.at(Math.random * 5)
+              document.getElementById('div1').textContent = Math.random()() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1) + parseInt(bottomArea.value);
+              color1 = colors.at(Math.random() * 5)
             console.log(color1)
             document.getElementById('div1').style.color = color1
             },100 * i);
@@ -170,8 +170,8 @@
         else {
           for(let i = 0; i < 10; i ++) {
               setTimeout(()=> {
-              document.getElementById('div1').textContent = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
-              color1 = colors.at(Math.random * 5)
+              document.getElementById('div1').textContent = Math.floor(Math.random()() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
+              color1 = colors.at(Math.random() * 5)
             console.log(color1)
             document.getElementById('div1').style.color = color1
             },100 * i);
@@ -230,10 +230,10 @@
         if (document.getElementById('decimal').checked === false) {
           animation('no');
           setTimeout(()=> {
-            let answer = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
+            let answer = Math.floor(Math.random()() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
             document.getElementById('div1').textContent = answer;
             document.getElementById('div1').style.display = 'block'
-            color1 = colors.at(Math.random * 5)
+            color1 = colors.at(Math.random() * 5)
             console.log(color1)
             document.getElementById('div1').style.color = color1
             return answer;
@@ -242,9 +242,9 @@
         if (document.getElementById('decimal').checked === true) {
           animation('decimal');
           setTimeout(()=> {
-            let answer = Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1) + parseInt(bottomArea.value);
+            let answer = Math.random()() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1) + parseInt(bottomArea.value);
             document.getElementById('div1').textContent = answer;
-            color1 = colors.at(Math.random * 5)
+            color1 = colors.at(Math.random() * 5)
             console.log(color1)
             document.getElementById('div1').style.color = color1
             return answer;
@@ -255,8 +255,8 @@
         if (type === 'decimal') {
           for(let i = 0; i < 10; i ++) {
               setTimeout(()=> {
-              document.getElementById('div1').textContent = Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1) + parseInt(bottomArea.value);
-              color1 = colors.at(Math.random * 5)
+              document.getElementById('div1').textContent = Math.random()() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1) + parseInt(bottomArea.value);
+              color1 = colors.at(Math.random() * 5)
             console.log(color1)
             document.getElementById('div1').style.color = color1
             },100 * i);
@@ -265,8 +265,8 @@
         else {
           for(let i = 0; i < 10; i ++) {
               setTimeout(()=> {
-              document.getElementById('div1').textContent = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
-              color1 = colors.at(Math.random * 5)
+              document.getElementById('div1').textContent = Math.floor(Math.random()() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
+              color1 = colors.at(Math.random() * 5)
             console.log(color1)
             document.getElementById('div1').style.color = color1
             },100 * i);
