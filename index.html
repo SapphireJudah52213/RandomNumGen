@@ -111,6 +111,7 @@
           setTimeout(()=> {
             let answer = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
             document.getElementById('div1').textContent = answer;
+            document.getElementById('div1').style.display = 'block'
             return answer;
           },1000);
         }
@@ -119,6 +120,7 @@
           setTimeout(()=> {
             let answer = Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1) + parseInt(bottomArea.value);
             document.getElementById('div1').textContent = answer;
+            document.getElementById('div1').style.display = 'block'
             return answer;
           },1000);
         }
