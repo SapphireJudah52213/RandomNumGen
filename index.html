@@ -27,9 +27,9 @@
   <body>
     <textarea style="height:16px;width:105px;resize:none;" placeholder="bottom number?" id="floor"></textarea>
     <textarea style="height:16px;width:105px;resize:none;position:absolute;margin-left:75px;" placeholder="top number?" id="ceiling"></textarea>
-    <button class="submitFloor" id="submitFloor" onclick="submit('floor')"><strong>Submit</strong></button>
-    <button class="submitCeiling" id="submitCeiling" onclick="submit('ceiling')"><strong>Submit</strong></button>
-    <div style="color: red;" id="div1">HI!</div>
+    <!--<button class="submitFloor" id="submitFloor" onclick="submit('floor')"><strong>Submit</strong></button>
+    <button class="submitCeiling" id="submitCeiling" onclick="submit('ceiling')"><strong>Submit</strong></button>-->
+    <div style="color: #00cffa;" id="div1">RESULT</div>
     <button class="go" id="go" onclick="roll()"><strong>GO!</strong></button>
     <script>
       let bottomArea = document.getElementById('floor')
@@ -47,9 +47,23 @@
         }
       }
       let roll = function() {
+        if(topArea.value === NaN) {
+          document.getElementById('div1').textContent = "Enter a top number please";
+        }
+        if(bottomArea.value === NaN) {
+          document.getElementById('div1').textContent = "Enter a bottom number please";
+        }
+        animation();
+        sleep(1000)
         let answer = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
         document.getElementById('div1').textContent = answer;
         return answer;
+      }
+      let animation = function() {
+        for(let i = 0; i < 10; i ++) {
+          document.getElementById('div1').textContent = Math.floor(Math.random() * (parseInt(topArea.value) - parseInt(bottomArea.value) + 1)) + parseInt(bottomArea.value);
+          sleep(100 * i);
+        }
       }
     </script>
   </body>
