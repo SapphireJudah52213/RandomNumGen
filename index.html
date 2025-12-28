@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      .submitFloor {
+        height:16px;
+        width:30px;
+        background:conic-gradient(red 0deg, orange 60deg, yellow 120deg, green 180deg, blue 240deg, purple 300deg, red 360deg);
+      }
+    </style>
   </head>
   <body>
-    <textarea style="height:40px;width:120px;resize:none;" placeholder="bottom number?" id="floor"></textarea>
+    <textarea style="height:16px;width:105px;resize:none;" placeholder="bottom number?" id="floor"></textarea>
+    <button class="submitFloor" id="submitFloor"></button>
     <div style="color: red;" >HI!</div>
     <script>
       let bottomArea = document.getElementById('floor')
