@@ -108,6 +108,9 @@
         const ScriptPC = document.createElement('script')
         ScriptPC.innerHTML = `let bottomArea = document.getElementById('floor')
         const colors = ['red','orange','yellow','green','blue','purple']
+        console.log(colors)
+        let color1 = colors[Math.random * 6]
+        console.log(color1)
       let topArea = document.getElementById('ceiling')
       let submit = function(type) {
         console.log(parseInt(bottomArea.value))
